@@ -1,0 +1,10 @@
+<svg width="24" height="15" viewBox="0 0 24 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="chevron-right-solid 1" clip-path="url(#clip0)">
+<path id="Vector" d="M11.2045 13.3817L2.09467 4.2718C1.65531 3.83244 1.65531 3.12012 2.09467 2.68081L3.15719 1.6183C3.5958 1.17969 4.30666 1.17884 4.7463 1.61642L12 8.83616L19.2537 1.61642C19.6933 1.17884 20.4042 1.17969 20.8428 1.6183L21.9053 2.68081C22.3447 3.12017 22.3447 3.83248 21.9053 4.2718L12.7955 13.3816C12.3562 13.821 11.6439 13.821 11.2045 13.3817Z" fill="white"/>
+</g>
+<defs>
+<clipPath id="clip0">
+<rect width="15" height="24" fill="white" transform="translate(24) rotate(90)"/>
+</clipPath>
+</defs>
+</svg>

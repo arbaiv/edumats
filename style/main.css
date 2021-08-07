@@ -1,0 +1,1360 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+}
+a{
+    text-decoration: none;
+    color: #020403;
+}
+/*Page container*/
+div#container{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(7, auto);
+}
+/* Start of Home section */
+div#home-bg{
+    grid-column: 1 / 13;
+    grid-row: 1 / 2;
+    background: url(../images/head-bg-1440.svg) no-repeat top left;
+    background-size: cover;
+}
+div#home-section{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(2, auto);
+}
+/*header section*/
+div#header{
+    grid-column: 1 / 13;
+    grid-row: 1 / 2;
+    height: 50px;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto;
+    color: white;
+    background-color: #52AB98;
+}
+
+/*Logo section*/
+div#logo{
+    grid-column: 1 / 6;
+    grid-row: 1 / 2;
+    display: grid;
+    align-content: center;
+    padding-left: 6.25rem;
+}
+div#logo h1{
+    font-size: 1.875rem;
+    font-weight: bold;
+}
+div#logo a{
+    color: white;
+}
+/*Navbar section*/
+div#navbar{
+    grid-column: 6 / 13;
+    grid-row: 1 / 2;
+    display: grid;
+    align-content: center;
+    padding-right: 6.25rem;
+}
+div#navbar ul{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    list-style-type: none;
+    list-style-position: inside;
+}
+div#navbar a{
+    color: white;
+    font-size: 1.125rem;
+    font-weight: 300;
+    display: inline-flex;
+    align-items: center;
+    height: 25px;
+    -webkit-transition: all 0.1s linear;
+    -moz-transition: all 0.1s linear;
+    transition: all 0.1s linear;
+}
+div#navbar a:hover{
+    -webkit-transform: translateY(2px);
+    -moz-transform: translateY(2px);
+    transform: translateY(2px);
+    font-weight: 500;
+}
+div#navbar a:active{
+    font-weight: 500;
+    border: none;
+}
+div#navbar a:focus{
+    font-weight: 500;
+    border: none;
+}
+/*Default Responsive navbar menu button*/
+div#menu-button{
+    display: none;
+}
+
+
+
+
+/*Header content section*/
+div#header-content{
+    grid-column: 1 / 13;
+    grid-row: 2 / 3;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto;
+    /*height is given 575px so that it covers the whole screen*/
+    height: 575px;
+    padding: 0rem 6.25rem;
+    /* overflow for content appearing effect */
+    overflow-x: hidden;
+}
+div#header-text{
+    grid-column: 1 / 7;
+    grid-row: 1 / 2;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    /* Animation effect */
+    -webkit-animation: slideLeft 1s forwards ease-out;
+    -moz-animation: slideLeft 1s forwards ease-out;
+    animation: slideLeft 1s forwards ease-out;
+}
+@keyframes slideLeft{
+    0%{
+        -webkit-transform: translateX(-100%);
+        -moz-transform: translateX(-100%);
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    50%{
+        opacity: 0;
+    }
+    100%{
+        -webkit-transform: translateX(0%);
+        -moz-transform: translateX(0%);
+        transform: translateX(0%);
+        opacity: 1;
+    }
+}
+div#header-text p{
+    font-size: 2.25rem;
+    font-weight: 500;
+    color: #020403;
+    letter-spacing: 1px;
+}
+/*Learn More button*/
+div#learn-more{
+    width: 218px;
+    height: 45.97px;
+    background: linear-gradient(245.65deg, #52AB98 15.17%, #52AB98 83.5%);
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    margin-top: 30px;
+    -webkit-transition: all 0.4s linear;
+    -moz-transition: all 0.4s linear;
+    transition: all 0.4s linear;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+div#learn-more a#learn-more-button{
+    width: 100%;
+    height: 100%;
+    display: block;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    font-weight: 300;
+    font-size: 1.25rem;
+    line-height: 23px;
+    color: white;
+    text-indent: -20px;
+    letter-spacing: 1px;
+}
+a#learn-more-svg-button{
+    position: relative;
+    width: 24px;
+    height: 24px;
+    left: 170px;
+    top: -28px;
+}
+div#learn-more:hover{
+    -webkit-transform: translateY(1px) scale(1.01);
+    -moz-transform: translateY(1px) scale(1.01);
+    transform: translateY(1px) scale(1.01);
+    background: linear-gradient(245.65deg, #4ea18f 15.17%, #4a9c8b 83.5%);
+}
+div#learn-more:active{
+    background: linear-gradient(245.65deg, #357769 15.17%, #3b8071 83.5%);
+}
+
+
+/*Header animation section*/
+div#header-animation{
+    grid-column: 7 / 13;
+    grid-row: 1 / 2;
+    padding-left: 6.25rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* for animation */
+    -webkit-animation: slideRight 1s forwards ease-out;
+    -moz-animation: slideRight 1s forwards ease-out;
+    animation: slideRight 1s forwards ease-out;
+}
+@keyframes slideRight{
+    0%{
+        -webkit-transform: translateX(100%);
+        -moz-transform: translateX(100%);
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    50%{
+        opacity: 0;
+    }
+    100%{
+        -webkit-transform: translateX(0%);
+        -moz-transform: translateX(0%);
+        transform: translateX(0%);
+        opacity: 1;
+    }
+}
+div#header-animation svg{
+    width: 100%;
+}
+g#video-section{
+    transform-box: fill-box;
+    transform-origin: center;
+    -webkit-animation: animateList 4s 1.5s infinite ease;
+    -moz-animation: animateList 4s 1.5s infinite ease;
+    animation: animateList 4s 1.5s infinite ease;
+}
+@keyframes animateList{
+    0%{
+
+    }
+    50%{
+        -webkit-transform: translateY(9px) scale(1.05);
+        -moz-transform: translateY(9px) scale(1.05);
+        transform: translateY(9px) scale(1.05);
+        opacity: 0;
+    }
+    51%{
+        -webkit-transform: translateY(-9px) scale(0.95);
+        -moz-transform: translateY(-9px) scale(0.95);
+        transform: translateY(-9px) scale(0.95);
+        opacity: 0;
+    }
+    100%{
+        -webkit-transform: translateY(0px) scale(1);
+        -moz-transform: translateY(0px) scale(1);
+        transform: translateY(0px) scale(1);
+        opacity: 1;
+    }
+}
+
+g#video-person{
+    -webkit-animation: changeface 4s 1.5s ease infinite;
+    -moz-animation: changeface 4s 1.5s ease infinite;
+    animation: changeface 4s 1.5s ease infinite;
+}
+@keyframes changeface{
+    0%{
+
+    }
+    50%{
+        -webkit-transform: translateX(-65px);
+        -moz-transform: translateX(-65px);
+        transform: translateX(-65px);
+        opacity: 0;
+    }
+    51%{
+        -webkit-transform: translateX(65px);
+        -moz-transform: translateX(65px);
+        transform: translateX(65px);
+        opacity: 0;
+    }
+    100%{
+        -webkit-transform: translateX(0px);
+        -moz-transform: translateX(0px);
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+/* End of home section */
+/* Start of About us section */
+div#about-us{
+    grid-column: 1 / 13;
+    grid-row: 2 / 3;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto;
+    overflow-x: hidden;
+    margin-bottom: 36px;
+}
+/*About section image*/
+div#about-image{
+    grid-column: 1 / 7;
+    grid-row: 1 / 2;
+    padding: 45px 25px 67px 60px;
+    background: url('../images/about-bg.svg') no-repeat top left;
+    background-size: 100%;
+    margin-top: 60px;
+}
+div#about-image img{
+    width: 100%;
+}
+/* To animate div#about-image */
+div.animate-about-image{
+    -webkit-animation: slideLeft 1s forwards ease-out;
+    -moz-animation: slideLeft 1s forwards ease-out;
+    animation: slideLeft 1s forwards ease-out;
+}
+
+/*About section content*/
+div#about-text{
+    grid-column: 7 / 12;
+    grid-row: 1 / 2;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    padding: 0px 30px 0px 69px;
+    margin-top: 60px;
+}
+/* To animate div#about-text */
+div.animate-about-text{
+    -webkit-animation: slideRight 1s forwards ease-out;
+    -moz-animation: slideRight 1s forwards ease-out;
+    animation: slideRight 1s forwards ease-out;
+}
+
+h2#about-header{
+    justify-self: left;
+    margin-bottom: 20px;
+    color: #020403;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+div#about-text p{
+    color: #020403;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+p#about-second-text{
+    margin-top: 20px;
+}
+/*our courses button*/
+div#our-courses-button{
+    width: 218px;
+    height: 45.97px;
+    background: linear-gradient(245.65deg, #52AB98 15.17%, #52AB98 83.5%);
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    margin-top: 30px;
+    -webkit-transition: all 0.4s linear;
+    -moz-transition: all 0.4s linear;
+    transition: all 0.4s linear;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+div#our-courses-button a#our-course-text{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    font-weight: 300;
+    font-size: 1.25rem;
+    line-height: 23px;
+    color: white;
+    text-indent: -20px;
+    letter-spacing: 1px;
+}
+a#our-courses-svg-button{
+    position: relative;
+    width: 24px;
+    height: 24px;
+    left: 170px;
+    top: -28px;
+}
+div#our-courses-button:hover{
+    -webkit-transform: translateY(1px) scale(1.01);
+    -moz-transform: translateY(1px) scale(1.01);
+    transform: translateY(1px) scale(1.01);
+    background: linear-gradient(245.65deg, #4ea18f 15.17%, #4a9c8b 83.5%);
+}
+div#our-courses-button:active{
+    background: linear-gradient(245.65deg, #357769 15.17%, #3b8071 83.5%);
+}
+/* End of about-us section */
+/* Start of Courses section */
+div#our-courses{
+    grid-column: 1 / 13;
+    grid-row: 3 / 4;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(3, auto);
+    padding: 0rem 5.25rem;
+}
+/* Course header text */
+div#course-header{
+    grid-column: 1 / 13;
+    grid-row: 1 / 2;
+    margin-top: 80px;
+    margin-bottom: 50px;
+    background: url(../images/courses-line.svg) no-repeat left center, url(../images/courses-line.svg) no-repeat right center;
+    background-size: 32vw;
+}
+div#course-header h2{
+    color: #020403;
+    font-weight: 600;
+    text-align: center;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+}
+/* Course list navigation */
+div#course-list{
+    grid-column: 1 / 13;
+    grid-row: 2 / 3;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto;
+}
+div#course-list ul{
+    grid-column: 2 / 7;
+    grid-row: 1 / 2;
+    list-style-type: none;
+    list-style-position: inside;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    color: #020403;
+    font-size: 1.25rem;
+    font-weight: 400;
+}
+div#course-list li{
+    cursor: pointer;
+    -webkit-transition: transform 0.1s linear;
+    -moz-transition: transform 0.1s linear;
+    transition: transform 0.1s linear;
+    width: min-content;
+    height: 20px;
+}
+/* For list activation on click */
+svg.list-active-one {
+    display: inline-block;
+    position: relative;
+    left: 0%;
+    top: -10px;
+}
+
+svg.list-active-two {
+    /* display: inline-block; */
+    display: none;
+    position: relative;
+    left: 0%;
+    top: -10px;
+}
+svg.list-active-three {
+    /* display: inline-block; */
+    display: none;
+    position: relative;
+    left: 0%;
+    top: -10px;
+}
+div#course-list li:hover{
+    font-weight: 500;
+    -webkit-transform: scale(1.02);
+    -moz-transform: scale(1.02);
+    transform: scale(1.02);
+}
+li.active-course{
+    font-weight: 500;
+}
+
+/* Box for all of the courses */
+div#course-box{
+    grid-column: 1 / 13;
+    grid-row: 3 / 4;
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 345px));
+    justify-content: center;
+}
+div#course-box div{
+    margin: 0px 24px 48px 24px;
+    -webkit-transition: all 0.5s ease-out;
+    -moz-transition: all 0.5s ease-out;
+    transition: all 0.5s ease-out;
+}
+div#course-box div:hover{
+    cursor: pointer;
+    -webkit-transform: scale(0.99);
+    -moz-transform: scale(0.99);
+    transform: scale(0.99);
+}
+div#course-box div:hover img{
+    opacity: 0.5;
+}
+div#course-box div img{
+    width: 100%;
+}
+svg.play-button{
+    width: 50px;
+    color: #87EAD5;
+}
+
+/* For course modal window video box */
+div.modal-container{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(119, 114, 114, 0.432);
+    display: none;
+    opacity: 0;
+    /* When active */
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+div.modal-show{
+    display: flex;
+    opacity: 1;
+}
+div#modal-box{
+    overflow: hidden;
+    width: 890px;
+    max-width: 100%;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    display: flex;
+    flex-flow: column nowrap;
+}
+#course-video{
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+}
+div#modal-close-button{
+    align-self: flex-end;
+    display: flex;
+    margin: 10px 10px 0px 0px;
+    position: absolute;
+    width: 25px;
+    color: #87ead577;
+    z-index: 2;
+    -webkit-transition: transform 0.4s ease-out;
+    -moz-transition: transform 0.4s ease-out;
+    transition: transform 0.4s ease-out;
+}
+div#modal-close-button:hover{
+    cursor: pointer;
+    -webkit-transform: scale(1.05);
+    -moz-transform: scale(1.05);
+    transform: scale(1.05);
+    color: #87EAD5;
+}
+/* For locking the scroll when modal open */
+body.modal-open {
+    height: 100vh;
+    overflow-y: hidden;
+}
+/* End of courses section */
+/* Start of teachers section */
+div#teachers{
+    grid-column: 1 / 13;
+    grid-row: 4 / 5;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(2, auto);
+    padding: 0rem 5.25rem;
+    overflow: hidden;
+}
+div#teachers-header{
+    grid-column: 1 / 13;
+    grid-row: 1 / 2;
+    margin-top: 100px;
+    margin-bottom: 80px;
+    background: url(../images/courses-line.svg) no-repeat left center, url(../images/courses-line.svg) no-repeat right center;
+    background-size: 32vw;
+}
+div#teachers-header h2{
+    color: #020403;
+    font-weight: 600;
+    text-align: center;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+}
+div#teachers-box{
+    grid-column: 1 / 13;
+    grid-row: 2 / 3;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto;
+}
+div#teachers-left-button{
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+div#teachers-right-button{
+    grid-column: 12 / 13;
+    grid-row: 1 / 2;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+div#teachers-box svg{
+    cursor: pointer;
+    opacity: 0.7;
+    -webkit-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+}
+div#teachers-box svg:hover{
+    -webkit-transform: scale(0.93);
+    -moz-transform: scale(0.93);
+    transform: scale(0.93);
+    opacity: 1;
+}
+/* For teachers section */
+div#teachers-section{
+    grid-column: 2 / 12;
+    grid-row: 1 / 2;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+}
+div.teacher{
+    max-width: 345px;
+    background: linear-gradient(277.74deg, rgba(82, 171, 152, 0.5) 10.95%, rgba(69, 170, 184, 0.5) 81.2%);
+    border: 1px solid rgba(162, 213, 219, 0.49);
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+/* Hide all the other teachers that needs to be cached */
+div.other-teachers{
+    display: none;
+}
+div.teacher img{
+    display: block;
+    width: 100%;
+    -webkit-border-radius: 10px 10px 0px 0px;
+    -moz-border-radius: 10px 10px 0px 0px;
+    border-radius: 10px 10px 0px 0px;
+}
+h2.teachers-name{
+    font-family: Raleway;
+    font-weight: 500;
+    font-size: 1.375rem;
+    letter-spacing: 1px;
+    margin: 20px 0px 10px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #FFFFFF;
+}
+h3.teachers-title{
+    font-family: Raleway;
+    font-weight: 300;
+    font-size: 1.25rem;
+    line-height: 23px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #FFFFFF;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+
+/* end of teachers section */
+/* Start of reviews section */
+div#reviews{
+    grid-column: 1 / 13;
+    grid-row: 5 / 6;
+    padding: 0rem 5.25rem 103px 5.25rem;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(2, auto);
+    background: url(../images/review-bg.svg) no-repeat top left;
+    background-size: cover;
+    margin-top: 120px;
+    color: white;
+    overflow: hidden;
+}
+div#review-header{
+    grid-column: 1 / 13;
+    grid-row: 1 / 2;
+    margin-top: 120px;
+    margin-bottom: 45px;
+    background: url(../images/review-line.svg) no-repeat left center, url(../images/review-line.svg) no-repeat right center;
+    background-size: 28vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+div#review-header h2{
+    font-family: Raleway;
+    font-weight: 500;
+    line-height: 28px;
+    color: #FFFFFF;
+    text-align: center;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+}
+div#review-section{
+    grid-column: 1 / 13;
+    grid-row: 2 / 3;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto;
+}
+div#review-left-button{
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    display: flex;
+    align-items: center;
+}
+div#review-right-button{
+    grid-column: 12 / 13;
+    grid-row: 1 / 2;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+div#review-section svg{
+    cursor: pointer;
+    opacity: 0.6;
+    -webkit-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+}
+div#review-section svg:hover{
+    -webkit-transform: scale(0.91);
+    -moz-transform: scale(0.91);
+    transform: scale(0.91);
+    opacity: 1;
+}
+div#review-box{
+    grid-column: 2 / 12;
+    grid-row: 1 / 2;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+/* Hide all the other reviews that needs to be cached */
+div.other-reviews{
+    display: none;
+}
+div#review-person{
+    margin-right: 20px;
+}
+div#review-person img{
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+}
+div#review-message{
+    margin-left: 20px;
+    max-width: 426px;
+}
+div#review-message h3{
+    margin-bottom: 10px;
+    font-size: 1.25rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+div#review-message p{
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+/* End of reviews section */
+/* Start of contact us section */
+div#contact-us{
+    grid-column: 1 / 13;
+    grid-row: 6 / 7;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(2, auto);
+    padding: 0rem 5.25rem;
+    margin-bottom: 60px;
+}
+div#contact-us-header{
+    grid-column: 1 / 13;
+    grid-row: 1 / 2;
+    background: url(../images/courses-line.svg) no-repeat left center, url(../images/courses-line.svg) no-repeat right center;
+    background-size: 32vw;
+    margin: 80px 0px 60px 0px;
+}
+div#contact-us-header h2{
+    color: #020403;
+    font-weight: 600;
+    text-align: center;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+}
+div#contact-us-details{
+    grid-column: 1 / 13;
+    grid-row: 2 / 3;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto;
+}
+div#contact-form{
+    grid-column: 1 / 7;
+    grid-row: 1 / 2;
+}
+input.input-style{
+    width: 90%;
+    height: 42px;
+    padding-left: 8px;
+    margin-bottom: 30px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    border: 2px solid rgba(82, 171, 152, 0.7);
+    font-size: 1rem;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+div#contact-form textarea{
+    width: 90%;
+    height: 130px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    padding: 8px 0px 0px 8px;
+    display: flex;
+    align-items: flex-start;
+    border: 2px solid rgba(82, 171, 152, 0.7);
+    font-size: 1rem;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+input.input-style:focus, textarea#question-box:focus{
+    outline: none;
+}
+input.input-style:hover, textarea#question-box:hover{
+    background-color: rgba(82, 171, 152, 0.2);
+}
+input#form-submit{
+    width: 218px;
+    height: 45.97px;
+    background: linear-gradient(245.65deg, #52AB98 15.17%, #52AB98 83.5%);
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    margin-top: 30px;
+    border: none;
+    font-weight: 300;
+    font-size: 1.25rem;
+    line-height: 23px;
+    letter-spacing: 1px;
+    color: white;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+input#form-submit:hover{
+    background: linear-gradient(245.65deg, #289e84 15.17%, #298d77 83.5%);
+    cursor: pointer;
+}
+
+div#follow-us{
+    grid-column: 7 / 13;
+    grid-row: 1 / 2;
+    display: flex;
+    flex-flow: column nowrap;
+}
+div#follow-us-header{
+    margin-bottom: 30px;
+    padding-top: 12px;
+}
+div#follow-us-header h3{
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
+    letter-spacing: 1px;
+}
+div#social-icons{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-self: center;
+}
+div#social-icons div{
+    display: flex;
+    flex-flow: row nowrap;
+    margin-bottom: 30px;
+    align-items: center;
+    opacity: 0.9;
+    -webkit-transition: all 0.1s ease-out;
+    -moz-transition: all 0.1s ease-out;
+    transition: all 0.1s ease-out;
+}
+div#social-icons a{
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+div#social-icons div:hover{
+    opacity: 1;
+    -webkit-transform: scale(1.01);
+    -moz-transform: scale(1.01);
+    transform: scale(1.01);
+}
+div#social-icons p{
+    margin-left: 10px;
+    font-weight: 300;
+    font-size: 1.125rem;
+    letter-spacing: 1px;
+    display: inline;
+}
+/* End of contact us section */
+/* Copyright section */
+div#copyright{
+    grid-column: 1 / 13;
+    grid-row: 7 / 8;
+    background: #52AB98;
+    height: 44px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: 300;
+    font-family: 'Courier New', Courier, monospace !important;
+    font-size: 1rem;
+    letter-spacing: 1px;
+}
+/* Scroll to the top button */
+div#scroll-top-button{
+    display: none;
+    position: fixed;
+    top: 85%;
+    right: 0px;
+    opacity: 0.7;
+    -webkit-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+}
+div#scroll-top-button:hover{
+    opacity: 1;
+}
+g#top-arrow{
+    -webkit-animation: up-down 2.2s ease-out infinite;
+    -moz-animation: up-down 2.2s ease-out infinite;
+    animation: up-down 2.2s ease-out infinite;
+}
+@keyframes up-down {
+    0%{
+        -webkit-transform: translateY(0px);
+        -moz-transform: translateY(0px);
+        transform: translateY(0px);
+    }
+    50%{
+        -webkit-transform: translateY(-5px);
+        -moz-transform: translateY(-5px);
+        transform: translateY(-5px);
+    }
+    100%{
+        -webkit-transform: translateY(0px);
+        -moz-transform: translateY(0px);
+        transform: translateY(0px);
+    }
+}
+
+/* Media query for device width higher than 1440px */
+@media screen and (min-width: 1440px){
+    body{
+        width: 1440px;
+        margin: 0px auto;
+    }
+    div#course-header{
+        background-size: 374px;
+    }
+    div#teachers-header{
+        background-size: 374px;
+    }
+    div#review-header{
+        background-size: 259px;
+    }
+    div#contact-us-header{
+        background-size: 374px;
+    }
+}
+
+/* Media query for device width lower than 1200px */
+@media screen and (max-width: 1200px){
+    div#logo{
+        grid-column: 1 / 5;
+        padding-left: 3.25rem;
+    }
+    div#navbar{
+        grid-column: 5 / 13;
+        padding-right: 3.25rem;
+    }
+    div#header-content{
+        padding: 0rem 3.25rem;
+    }
+    div#about-us{
+        overflow-y: hidden;
+    }
+    div#about-text{
+        grid-column: 7 / 13;
+        padding: 0px 50px;
+    }
+    div#our-courses{
+        padding: 0rem 3.25rem;
+    }
+    div#course-list ul{
+        grid-column: 4 / 10;
+    }
+    div#teachers{
+        padding: 0rem 3.25rem;
+    }
+    div#reviews{
+        padding: 0rem 3.25rem 103px 3.25rem;
+    }
+    div#review-header{
+        background-size: 24vw;
+    }
+    div#contact-us{
+        padding: 0rem 3.25rem;
+    }
+}
+
+/* Media query for device width lower than 1000px */
+@media screen and (max-width: 1000px){
+    div#teacher-two{
+        display: none;
+    }
+}
+
+/* Media query for device width lower than 900px or Tablet version */
+@media screen and (max-width: 900px){
+    /* For course video responsiveness */
+    div#modal-box{
+        height: auto;
+        max-height: 500px;
+    }
+
+    div#header{
+        grid-template-rows: repeat(2, auto);
+        z-index: 1;
+    }
+    div#logo{
+        grid-column: 1 / 11;
+        background-color: #52AB98;
+    }
+    /*for the responsive navbar*/
+    div#navbar{
+        grid-column: 1 / 13;
+        grid-row: 2 / 3;
+        padding: 10px 0px;
+        background-color: #62B9A6;
+        width: 50%;
+        z-index: -1;
+        position: absolute;
+        top: 50px;
+        right: 0px;
+        overflow: hidden;
+    }
+    /*navbar when closed or set to default*/
+    div.navbar-inactivate{
+        opacity: 0;
+        -webkit-transform: translateY(-150%);
+        -moz-transform: translateY(-150%);
+        transform: translateY(-150%);
+        border-bottom-left-radius: 70%;
+        -moz-border-bottom-left-radius: 70%;
+        -webkit-border-bottom-left-radius: 70%;
+        transform-origin: right;
+        -moz-transform-origin: right;
+        -webkit-transform-origin: right;  
+        -webkit-transition: all 1s ease-out;
+        -moz-transition: all 1s ease-out;
+        transition: all 1s ease-out;
+    }
+    /*navbar when clicked on the menu button*/
+    div.navbar-activate{
+        display: block !important;
+        opacity: 1;
+        -webkit-transform: translateY(0%);
+        -moz-transform: translateY(0%);
+        transform: translateY(0%);
+        border-bottom-left-radius: 10px;
+        -moz-border-bottom-left-radius: 10px;
+        -webkit-border-bottom-left-radius: 10px;
+    }
+
+
+    div#navbar ul{
+        flex-flow: column nowrap;
+        align-items: flex-start;
+    }
+    div#navbar li{
+        width: 100%;
+        height: 40px;
+        opacity: 0;
+        -webkit-transform: translateX(150%);
+        -moz-transform: translateX(150%);
+        transform: translateX(150%);
+        -webkit-transition: all 1s ease-out;
+        -moz-transition: all 1s ease-out;
+        transition: all 1s ease-out;
+    }
+    div#navbar li:nth-child(1){
+        -webkit-transition-delay: 0.1s;
+        -moz-transition-delay: 0.1s;
+        transition-delay: 0.1s;
+    }
+    div#navbar li:nth-child(2){
+        -webkit-transition-delay: 0.2s;
+        -moz-transition-delay: 0.2s;
+        transition-delay: 0.2s;
+    }
+    div#navbar li:nth-child(3){
+        -webkit-transition-delay: 0.3s;
+        -moz-transition-delay: 0.3s;
+        transition-delay: 0.3s;
+    }
+    div#navbar li:nth-child(4){
+        -webkit-transition-delay: 0.4s;
+        -moz-transition-delay: 0.4s;
+        transition-delay: 0.4s;
+    }
+    div#navbar li:nth-child(5){
+        -webkit-transition-delay: 0.5s;
+        -moz-transition-delay: 0.5s;
+        transition-delay: 0.5s;
+    }
+    div#navbar li:nth-child(6){
+        -webkit-transition-delay: 0.6s;
+        -moz-transition-delay: 0.6s;
+        transition-delay: 0.6s;
+    }
+    /*this is for the animation on li*/
+    div#navbar.navbar-activate li{
+        opacity: 1;
+        -webkit-transform: translateX(0%);
+        -moz-transform: translateX(0%);
+        transform: translateX(0%);
+    }
+
+    div#navbar a{
+        padding: 0px 25px;
+    }
+    /*Visible Hamburger Styles*/
+    div#menu-button{
+        grid-column: 11 / 13;
+        grid-row: 1 / 2;
+        background-color: #52AB98;
+        padding: 12px 25px;
+        display: grid;
+        justify-content: right;
+        align-items: center;
+        cursor: pointer;
+    }    
+    div#menu-button span{
+        display: block;
+        background-color: #ffffff;
+        width: 24px;
+        height: 3px;
+        margin: 4px 0px;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        border-radius: 10px;
+        -webkit-transition: all 1s ease-out;
+        -moz-transition: all 1s ease-out;
+        transition: all 1s ease-out;
+    }
+    /*Animation for the hamburger menu*/
+    div#menu-button.hamburger span:nth-child(1){
+        -webkit-transform: rotate(45deg) translateY(10px);
+        -moz-transform: rotate(45deg) translateY(10px);
+        transform: rotate(45deg) translateY(10px);
+    }
+    div#menu-button.hamburger span:nth-child(2){
+        width: 0px;
+        opacity: 0;
+    }
+    div#menu-button.hamburger span:nth-child(3){
+        -webkit-transform: rotate(-45deg) translateY(-10px);
+        -moz-transform: rotate(-45deg) translateY(-10px);
+        transform: rotate(-45deg) translateY(-10px);
+    }
+    div#modal-close-button{
+        color: #87EAD5;
+    }
+}
+
+/* Media query for device width lower than 768px or Ipad version  */
+@media screen and (max-width: 768px){
+    div#header-content{
+        grid-template-rows: repeat(2, auto);
+        height: max-content;
+        overflow-y: hidden;
+    }
+    div#header-text{
+        grid-column: 1 / 13;
+        grid-row: 2 / 3;
+        margin: 50px 0px 100px 0px;
+    }
+    div#header-animation{
+        grid-column: 1 / 13;
+        grid-row: 1 / 2;
+        margin-top: 70px;
+        padding-left: 0px;
+    }
+    svg path#bg{
+        opacity: 0.7;
+    }
+
+    div#about-us{
+        grid-template-rows: repeat(2, auto);
+    }
+    div#about-image{
+        grid-column: 1 / 12;
+        grid-row: 1 / 2;
+    }
+    div#about-text{
+        grid-column: 1 / 13;
+        grid-row: 2 / 3;
+        margin-top: 25px;
+    }
+    div#course-header{
+        background-size: 26vw;
+    }
+    div#course-list ul{
+        grid-column: 3 / 11;
+    }
+    div#course-box{
+        grid-template-columns: repeat(auto-fit, minmax(200px, 285px));
+    }
+    div#teachers-header{
+        background-size: 26vw;
+    }
+    div#review-header{
+        background-size: 18vw;
+    }
+    div#contact-us-header{
+        background-size: 26vw;
+    }
+}
+/* Media query for device width lower than 650px */
+@media screen and (max-width: 650px){
+    div#reviews{
+        padding: 0rem 1.25rem 103px 1.25rem;
+        margin-top: 60px;
+    }
+    div#review-header{
+        background: none;
+    }
+    div#review-box{
+        flex-flow: column nowrap;
+        margin: 0px 10px;
+    }
+    div#review-message h3{
+        margin-top: 20px;
+    }
+    div#contact-us{
+        padding: 0rem 1.25rem;
+        margin-bottom: 30px;
+    }
+    div#contact-us-header{
+        background-size: 20vw;
+    }
+    div#contact-us-details{
+        grid-template-rows: repeat(2, auto);
+    }
+    div#contact-form{
+        grid-column: 1 / 13;
+        grid-row: 1 / 2;
+    }
+    div#follow-us{
+        grid-column: 1 / 13;
+        grid-row: 2 / 3;
+        margin-top: 50px;
+    }
+    div#follow-us-header h3{
+        text-align: left;
+    }
+    div#social-icons{
+        align-self: flex-start;
+    }
+    input.input-style {
+        width: 100%;
+    }
+    div#contact-form textarea{
+        width: 100%;
+    }
+}
+/* Media query for device width lower than 500px or mobile version */
+@media screen and (max-width: 500px){
+    div#home-bg{
+        height: 100vh;
+    }
+    div#logo{
+        padding-left: 1.25rem;
+    }
+    div#header-content{
+        padding: 0rem 1.25rem;
+    }
+    div#header-text{
+        margin: 10px 0px 80px 0px;
+        padding: 0px 10px;
+    }
+    div#header-animation{
+        margin-top: 40px;
+    }
+    div#about-text{
+        margin-top: 0px;
+    }
+    div#our-courses{
+        padding: 0rem 1.25rem;
+    }
+    div#course-header{
+        background-size: 20vw;
+        margin-bottom: 30px;
+    }
+    div#course-list ul{
+        grid-column: 1 / 13;
+    }
+    div#course-box{
+        grid-template-columns: repeat(auto-fit, minmax(250px, 345px));
+    }
+    div#modal-close-button{
+        width: 18px;
+        margin: 5px 5px 0px 0px;
+    }
+    div#teachers{
+        padding: 0rem 1.25rem;
+    }
+    div#teachers-header{
+        background-size: 20vw;
+        margin-bottom: 50px;
+    }
+    div.teacher{
+        margin: 0px 20px;
+    }
+}
